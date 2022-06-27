@@ -1,32 +1,34 @@
-// import logo from './logo.svg';
-// import './App.css';
 import React from "react";
+import Home from "./component/Home";
+import Truffles from "./component/Truffles";
+import Crepes from "./component/Crepes";
+import Cookies from "./component/Cookies"
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
+      <header>
+        <div>
+          <h1>Dessert</h1>
 
-        <Routes>
-          <Route path="/about">About</Route>
-          <Route path="/users">Users</Route>
-          <Route path="/">Home</Route>
-        </Routes>
-      </div>
+          <div><Link to="/">Home</Link></div>
+          <div><Link to="/Truffles">Truffles</Link></div>
+          <div><Link to="/Crepes">Crepes</Link></div>
+          <div><Link to="/Cookies">Cookies</Link></div>
+        </div>
+      </header>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Truffles" element={<Truffles />} />
+        <Route path="/Crepes" element={<Crepes />} />
+        <Route path="/Cookies" element={<Cookies />} />
+
+      </Routes>
+
+      <footer>footer</footer>
+
     </Router>
   );
 }
