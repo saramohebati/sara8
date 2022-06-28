@@ -3,19 +3,23 @@ import Home from "./component/Home";
 import Truffles from "./component/Truffles";
 import Crepes from "./component/Crepes";
 import Cookies from "./component/Cookies"
+
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <Router>
       <header>
-        <div>
-          <h1>Dessert</h1>
+        <div >
 
-          <div><Link to="/">Home</Link></div>
-          <div><Link to="/Truffles">Truffles</Link></div>
-          <div><Link to="/Crepes">Crepes</Link></div>
-          <div><Link to="/Cookies">Cookies</Link></div>
+          <h1 className="title">Dessert </h1>
+          <div className="header">
+            <div><Link to="/">Home</Link></div>
+            <div><Link to="/Truffles">Truffles</Link></div>
+            <div><Link to="/Crepes">Crepes</Link></div>
+            <div><Link to="/Cookies">Cookies</Link></div>
+          </div>
+
         </div>
       </header>
 
@@ -27,7 +31,7 @@ function App() {
 
       </Routes>
 
-      <footer>footer</footer>
+      <footer>Have Good Day.</footer>
 
     </Router>
   );
